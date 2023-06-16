@@ -12,18 +12,25 @@ Utilizar For y funciones con paso de parámetro*/
 #include <stdio.h>
 #include <string.h>
 #include <locale.h>
+
 int main(){
     setlocale(LC_ALL, "es_ES");
-    int i, votosAna, votosHortencia, votosNulos, numAlumns, voto; char ganadora[20];
+    int i, votosAna, votosHortencia, votosNulos, numAlumns, voto;
+    char ganadora[20] = "";
+    votosAna = 0;
+    votosHortencia = 0;
+    votosNulos = 0; 
     /* Entradas */
     do{
-        print("Ingrese el numero de almunos"); scanf("%i", &numAlumns);
+        printf("Ingrese el numero de almunos: ");
+        scanf("%i", &numAlumns);
         if(numAlumns<0){
-            print("El numero de alumnos que ingreso es negativo \n");
+            printf("El numero de alumnos que ingreso es negativo \n");
         }
-    }while(numAlumns < 0)
-    for(i = 0; i < 5; i++){
-        print("Por quien desea botar \n1) Anacreta\n2) Hortencia\nSi desea anular su voto precione cualquier otro numero entero"); scanf("%i", &voto);
+    }while(numAlumns < 0);
+    for(i = 0; i < numAlumns; i++){
+        printf("Por quien desea botar \n1) Anacreta\n2) Hortencia\nSi desea anular su voto precione cualquier otro numero entero: ");
+        scanf("%i", &voto);
         /* Proceso*/
         if(voto == 1){
             votosAna ++;
@@ -34,13 +41,11 @@ int main(){
         }
     }
     if(votosAna > votosHortencia){
-        ganadora = "Anacreta";
+        strcpy(ganadora, "Anacreta");
     }else if(votosAna < votosHortencia){
-        ganadora = "Hortencia"
+        strcpy(ganadora, "Hortencia");
     }else{
-        ganadora = "empate"
+        strcpy(ganadora, "empate");
     }
-    print("hubo un total de votos de %i\nAna tuvo un total de %i\nHortencia recibio un total de%i\n El resultado fue: %s" votosAna+votosHortencia+votosNulos, votosAna, votosHortencia, ganadora);
-
-
-
+    printf("hubo un total de votos de %i\nAna tuvo un total de %i\nHortencia recibio un total de %i\n El resultado fue: %s", votosAna+votosHortencia+votosNulos, votosAna, votosHortencia, ganadora);
+}
