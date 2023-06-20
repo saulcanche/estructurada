@@ -4,6 +4,9 @@ Version: 1.0
 Sistema operativo: Linux ubuntu
 Fecha de cracion: 20  de junio 2023
 Descripcion:
+31. E.P que lea una matriz de 5 X 5 elementos y que calcule e imprima
+la suma de sus elementos que se encuentran en la diagonal principal, así como el producto de sus elementos que se encuentran en la
+diagonal invertida.
 */
 #include <stdio.h>
 #include <string.h>
