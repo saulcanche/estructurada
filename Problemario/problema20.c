@@ -9,7 +9,10 @@ elemento negativo y otro positivo y, que determine e imprima su
 posición.
 */
 #include <stdio.h>
-#include <string.h>
 #include <locale.h>
 int main(){
     setlocale(LC_ALL, "es_ES");
+    printf("")
+    Numeros[]    
+}
+
