@@ -9,11 +9,11 @@ elemento negativo y otro positivo y, que determine e imprima su
 posición.
 */
 #include <stdio.h>
-#include <locale.h>
+// #include <locale.h>
 int main(){
-    setlocale(LC_ALL, "es_ES");
+//    setlocale(LC_ALL, "es_ES");
     printf("Hola uwu \n");
-    printf("Esto es una prueba");
-    printf("I dont get why thi is not working unu");
+    int num = 5;
+    printf("%i", num);
 }
 
