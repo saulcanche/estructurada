@@ -12,7 +12,8 @@ posición.
 #include <locale.h>
 int main(){
     setlocale(LC_ALL, "es_ES");
-    printf("")
-    Numeros[]    
+    printf("Hola uwu \n");
+    printf("Esto es una prueba");
+    printf("I dont get why thi is not working unu");
 }
 
