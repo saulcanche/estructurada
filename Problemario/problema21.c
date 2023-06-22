@@ -8,7 +8,40 @@ Descripcion:
 sumatoria y el producto de sus elementos.
 */
 #include <stdio.h>
-#include <string.h>
 #include <locale.h>
+int sumVector(int vector[], int numElementos);
+int prodVector(int vector[], int numElementos);
+int leerVectorNumeros(int numElementos, int numeros[]);
 int main(){
     setlocale(LC_ALL, "es_ES");
+    /* Entradas*/
+    int numElementos;
+    printf("Ingrese la cantidad de numeros que le gustaria leer: "); scanf("%i", &numElementos);
+    int numeros[numElementos];
+    leerVectorNumeros(numElementos, numeros);
+    /* Salida*/
+    printf("La suma de los elementos es %i, y el producto es %i", sumVector(numeros, numElementos), prodVector(numeros, numElementos));
+}
+/* Proceso*/
+int leerVectorNumeros(int numElementos, int numeros[]){
+    for (int i = 0; i < numElementos; i++)
+    {
+        printf("Ingrese el numero %i :", i+1);
+        scanf("%i", &numeros[i]);
+    }
+    return 0;
+};
+int sumVector(int vector[], int numElementos){
+    int sum = 0;
+    for(int i = 0; i < numElementos; i++){
+        sum += vector[i];
+    }
+    return sum;
+}
+int prodVector(int vector[], int numElementos){
+    int prod = 1;
+    for(int i = 0; i < numElementos ; i++){
+        prod *= vector[i];
+    }
+    return prod;
+}
