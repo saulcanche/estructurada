@@ -15,18 +15,27 @@ void leerVectorNumeros(int numElementos, int numeros[]);
 void contarParesImpares(int numeros[], int numElementos, int *pares, int *impares);
 void vectorImpares(int numElementos, int numeros[], int resultado[]);
 void vectorPares(int numElementos, int numeros[], int resultado[]);
-
+void printVector(int vector[], int numElementos);
+int sumVector(int vector[], int numElementos);
+int prodVector(int vector[], int numElementos);
 int main(){
     setlocale(LC_ALL, "es_ES"); // local español
     /* Entradas*/
     int pares = 0, impares = 0;
     int numeros[NUM_ELEMENTOS];
     leerVectorNumeros(NUM_ELEMENTOS, numeros);
+    /* Proceso*/
     contarParesImpares(numeros, NUM_ELEMENTOS, &pares, &impares);
     int numerosPares[pares];
-    int numeroImpares[impares];
-    vectorImpares(NUM_ELEMENTOS, numeros, numeroImpares);
+    int numerosImpares[impares];
+    vectorImpares(NUM_ELEMENTOS, numeros, numerosImpares);
     vectorPares(NUM_ELEMENTOS, numeros, numerosPares);
+    printf("usted introdujo los siguientes numeros pares: \n");
+    printVector(numerosPares, pares);
+    printf("\nla suma de los numeros pares es, %i \n", sumVector(numerosPares, pares));
+    printf("usted introdujo los siguientes numeros impares \n");
+    printVector(numerosImpares, impares);
+    printf("\nel producto de impares es: %i \n", prodVector(numerosImpares, impares));
 }
 
 void leerVectorNumeros(int numElementos, int numeros[]){
@@ -70,4 +79,28 @@ void contarParesImpares(int numeros[], int numElementos, int *pares, int *impare
             (*impares)++;
         }
     }
+}
+void printVector(int vector[], int numElementos) {
+    printf("<");
+    for (int i = 0; i < numElementos; i++) {
+        printf("%d", vector[i]);
+        if (i != numElementos - 1) {
+            printf(", ");
+        }
+    }
+    printf(">");
+}
+int sumVector(int vector[], int numElementos){
+    int sum = 0;
+    for(int i = 0; i < numElementos; i++){
+        sum += vector[i];
+    }
+    return sum;
+}
+int prodVector(int vector[], int numElementos){
+    int prod = 1;
+    for(int i = 0; i < numElementos ; i++){
+        prod *= vector[i];
+    }
+    return prod;
 }
