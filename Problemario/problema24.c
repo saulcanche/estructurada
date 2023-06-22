@@ -33,11 +33,11 @@ int main(){
    /* Salidas*/
     printf("Usted ingreso el vector 1: ");
     imprimirVectorNumeros(numElementos, numeros1);    
-    printf("Usted ingreso el vector 2: ");
+    printf("\nUsted ingreso el vector 2: ");
     imprimirVectorNumeros(numElementos, numeros2);    
-    printf("Los productos de los vectores son: ");
+    printf("\nLos productos de los vectores son: ");
     imprimirVectorNumeros(numElementos, numerosProd);    
-    printf("Las sumas de los vectores son: ");
+    printf("\nLas sumas de los vectores son: ");
     imprimirVectorNumeros(numElementos, numerosSum);
 }
 void leerVectorNumeros(int numElementos, int numeros[]){
