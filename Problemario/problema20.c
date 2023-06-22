@@ -13,6 +13,7 @@ posición.
 int main(){
     setlocale(LC_ALL, "es_ES");
     int n, positivos, negativos;
+    /* Entradas */
     printf("Ingrese la cantidad de numeros que deasea ingresar:  "); scanf("%i", &n);
     int numeros[n], posPositivos[n], posNegativos[n];
     positivos = 0; negativos = 0;
@@ -20,6 +21,7 @@ int main(){
         printf("Ingrese el numero %i:", i+1);
         scanf("%d", &numeros[i]);
     }
+    /* Proceso */
     for (int i = 0; i < n; i++) {
         if (numeros[i] > 0)
         {
@@ -31,6 +33,7 @@ int main(){
             negativos++;
         }
     }
+    /* Salida*/
     printf("Ingresaste un total de %i numeros positivos y un total de %i numeros negativos \n", positivos, negativos);
     printf("Los numeros positivos se encuentran en las posiciones: ");
     for (int i = 0; i < positivos; i++)
