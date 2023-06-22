@@ -30,6 +30,7 @@ int main(){
     int numerosImpares[impares];
     vectorImpares(NUM_ELEMENTOS, numeros, numerosImpares);
     vectorPares(NUM_ELEMENTOS, numeros, numerosPares);
+    /* Salida*/
     printf("usted introdujo los siguientes numeros pares: \n");
     printVector(numerosPares, pares);
     printf("\nla suma de los numeros pares es, %i \n", sumVector(numerosPares, pares));
