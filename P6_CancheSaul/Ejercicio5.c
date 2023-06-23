@@ -12,6 +12,50 @@ que se obtiene intercambiando filas por columnas; es decir, el elemento A(i,j) s
 */
 #include <stdio.h>
 #include <locale.h>
+void readMatriz(int n, int m, float matriz[n][m]) {
+    printf("Ingrese los elementos de la matriz:\n");
+    for (int i = 0; i < n; i++) {
+        for (int j = 0; j < m; j++) {
+            scanf("%f", &matriz[i][j]);
+        }
+    }
+}
+
+void transpuestaMatriz(int n, int m, float matriz[n][m], float transpuesta[m][n]) {
+    for (int i = 0; i < n; i++) {
+        for (int j = 0; j < m; j++) {
+            transpuesta[j][i] = matriz[i][j];
+        }
+    }
+}
+
+void printMatriz(int n, int m, float matriz[n][m]) {
+    for (int i = 0; i < n; i++) {
+        for (int j = 0; j < m; j++) {
+            printf("%.2f ", matriz[i][j]);
+        }
+        printf("\n");
+    }
+}
 int main(){
     setlocale(LC_ALL, "es_ES"); // local español
+    int n, m;
+    printf("Ingrese el número de filas: ");
+    scanf("%d", &n);
+    printf("Ingrese el número de columnas: ");
+    scanf("%d", &m);
+
+    float matriz[n][m];
+    float traspuesta[m][n];
+
+    readMatriz(n, m, matriz);
+    transpuestaMatriz(n, m, matriz, traspuesta);
+
+    printf("\nMatriz original:\n");
+    printMatriz(n, m, matriz);
+
+    printf("\nMatriz transpuesta:\n");
+    printMatriz(m, n, traspuesta);
+
+    return 0;
 }

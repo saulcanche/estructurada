@@ -122,8 +122,9 @@ void contarMayoresPromedio(int numElementos,float numeros[],float promedio,int *
 }
 void printTabla(int numElementos,char nombres[][30],float estatura[],float peso[],int edad[],float estaturaPromedio,float pesoPromedio,float edadPromedio){
 printf("Nombre\t\tEstatura\tPeso\tEdad\n");
-    for (int i = 0; i < numElementos; i++){
-        printf("%s\t\t%.2f\t%.2f\t%d\n",nombres[i],estatura[i],peso[i],edad[i]);
+    for (int i = 0; i < numElementos; i++)
+    {
+    printf("%s\t\t%.2f\t%.2f\t%d\n",nombres[i],estatura[i],peso[i],edad[i]);
     }
     printf("Promedio\t%.2f\t%.2f\t%.2f\n",estaturaPromedio,pesoPromedio,edadPromedio);
 }
