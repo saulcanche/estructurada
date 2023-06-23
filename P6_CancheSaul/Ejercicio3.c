@@ -12,6 +12,66 @@ Si no la hay, deberá imprimir no existe la moda. Se recomienda ordenar los elem
 */
 #include <stdio.h>
 #include <locale.h>
+#define NUM_ELEMENTOS 10
+void leerVectorNumeros(int numElementos, int numeros[]);
+void ordenarVector(int numElementos, int numeros[]);
+int calcularModa(int numElementos, int numeros[]);
 int main(){
     setlocale(LC_ALL, "es_ES"); // local español
+    int numeros[NUM_ELEMENTOS];
+    leerVectorNumeros(NUM_ELEMENTOS, numeros);
+    ordenarVector(NUM_ELEMENTOS, numeros);
+    int moda = calcularModa(NUM_ELEMENTOS, numeros);
+    if (moda == -1) {
+        printf("No existe la moda\n");
+    } else {
+        printf("La moda es: %d\n", moda);
+    }
+    return 0;
+}
+
+void leerVectorNumeros(int numElementos, int numeros[]){
+    for (int i = 0; i < numElementos; i++)
+    {
+        printf("Ingrese el numero %i :", i+1);
+        scanf("%i", &numeros[i]);
+    }
+}
+
+void ordenarVector(int numElementos, int numeros[]) {
+    for (int i = 0; i < numElementos - 1; i++) {
+        for (int j = i + 1; j < numElementos; j++) {
+            if (numeros[i] > numeros[j]) {
+                int temp = numeros[i];
+                numeros[i] = numeros[j];
+                numeros[j] = temp;
+            }
+        }
+    }
+}
+
+int calcularModa(int numElementos, int numeros[]) {
+    int maxCount = 0;
+    int moda = -1;
+    int count = 1;
+    for (int i = 1; i < numElementos; i++) {
+        if (numeros[i] == numeros[i-1]) {
+            count++;
+        } else {
+            if (count > maxCount) {
+                maxCount = count;
+                moda = numeros[i-1];
+            } else if (count == maxCount) {
+                moda = -1;
+            }
+            count = 1;
+        }
+    }
+    if (count > maxCount) {
+        maxCount = count;
+        moda = numeros[numElementos-1];
+    } else if (count == maxCount) {
+        moda = -1;
+    }
+    return moda;
 }
