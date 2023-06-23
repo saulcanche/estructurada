@@ -14,17 +14,71 @@ cada arreglo a un lado del otro.
 */
 
 #include <stdio.h>
-#include <locale.h>
-void leerVectorNumeros(int numElementos, int numeros[]);
-int main(){
-    setlocale(LC_ALL, "es_ES"); // local español
 
-}
-void leerVectorNumeros(int numElementos, int numeros[]){
-    for (int i = 0; i < numElementos; i++)
-    {
-        printf("Ingrese el numero %i :", i+1);
-        scanf("%i", &numeros[i]);
+void leerMatriz(int n, int m, int matriz[n][m]) {
+    printf("Ingrese los elementos de la matriz:\n");
+    for (int i = 0; i < n; i++) {
+        for (int j = 0; j < m; j++) {
+            scanf("%d", &matriz[i][j]);
+        }
     }
+}
+
+void imprimirMatriz(int n, int m, int matriz[n][m]) {
+    for (int i = 0; i < n; i++) {
+        for (int j = 0; j < m; j++) {
+            printf("%d ", matriz[i][j]);
+        }
+        printf("\n");
+    }
+}
+
+void multiplicarMatrices(int n, int m, int p, int matrizA[n][m], int matrizB[m][p], int matrizP[n][p]) {
+    for (int i = 0; i < n; i++) {
+        for (int j = 0; j < p; j++) {
+            matrizP[i][j] = 0;
+            for (int k = 0; k < m; k++) {
+                matrizP[i][j] += matrizA[i][k] * matrizB[k][j];
+            }
+        }
+    }
+}
+
+int main() {
+    int nA, mA;
+    printf("Ingrese el número de filas de la matriz A: ");
+    scanf("%d", &nA);
+    printf("Ingrese el número de columnas de la matriz A: ");
+    scanf("%d", &mA);
+    
+    int nB, mB;
+    printf("Ingrese el número de filas de la matriz B: ");
+    scanf("%d", &nB);
+    printf("Ingrese el número de columnas de la matriz B: ");
+    scanf("%d", &mB);
+    
+    if (mA != nB) {
+        printf("No se pueden multiplicar las matrices.\n");
+        return 0;
+    }
+    
+    int matrizA[nA][mA];
+    leerMatriz(nA, mA, matrizA);
+    
+    int matrizB[nB][mB];
+    leerMatriz(nB, mB, matrizB);
+    
+    int matrizP[nA][mB];
+    multiplicarMatrices(nA, mA, mB, matrizA, matrizB, matrizP);
+    
+    printf("Matriz A:\n");
+    imprimirMatriz(nA, mA, matrizA);
+    
+    printf("Matriz B:\n");
+    imprimirMatriz(nB, mB, matrizB);
+    
+    printf("Matriz P:\n");
+    imprimirMatriz(nA, mB, matrizP);
+    
     return 0;
 }
