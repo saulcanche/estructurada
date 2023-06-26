@@ -11,5 +11,22 @@ negativos de la primera matriz, así como su posición.
 #include <stdio.h>
 #include <string.h>
 #include <locale.h>
+void leerMatriz(int n, int m, int matriz[n][m]) {
+    printf("Ingrese los elementos de la matriz:\n");
+    for (int i = 0; i < n; i++) {
+        for (int j = 0; j < m; j++) {
+            scanf("%d", &matriz[i][j]);
+        }
+    }
+}
+void imprimirMatriz(int n, int m, int matriz[n][m]) {
+    for (int i = 0; i < n; i++) {
+        for (int j = 0; j < m; j++) {
+            printf("%d ", matriz[i][j]);
+        }
+        printf("\n");
+    }
+}
 int main(){
     setlocale(LC_ALL, "es_ES");
+}
