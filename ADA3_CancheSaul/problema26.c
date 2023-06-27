@@ -9,6 +9,7 @@ imprima, una matriz de N2 X 2 elementos, que contenga los elementos
 negativos de la primera matriz, así como su posición.
 */
 #include <stdio.h>
+#include <locale.h>
 
 // modifique para los n y m deseados
 #define N 3
@@ -78,14 +79,17 @@ void imprimirMatrizNegativos(float negativos[N*M][2], int k)
 
 int main()
 {
+    setlocale(LC_ALL, "es_ES");
     float matriz[N][M];
+
     float negativos[N*M][2];
     int k = 0;
-
+    /* Entrada */
     leerMatriz(matriz);
+    /* Proceso */
     generarMatrizNegativos(matriz, negativos, &k);
+    /* Salida*/
     imprimirMatriz(matriz);
     imprimirMatrizNegativos(negativos, k);
-
     return 0;
 }
