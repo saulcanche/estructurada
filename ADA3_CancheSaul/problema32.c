@@ -8,7 +8,36 @@ Descripcion:
 cuantos elementos igual a cero, se encuentran en las filas 3 y 4.
 */
 #include <stdio.h>
-#include <string.h>
 #include <locale.h>
-int main(){
+#define N 6
+
+void leerMatriz(int matriz[][N], int n) {
+    int i, j;
+    for (i = 0; i < n; i++) {
+        printf("Ingrese los elementos de la fila %d:\n", i + 1);
+        for (j = 0; j < n; j++) {
+            printf("Elemento %d: ", j + 1);
+            scanf("%d", &matriz[i][j]);
+        }
+    }
+}
+
+int contarCeros(int matriz[][N], int n) {
+    int i, j, contador = 0;
+    for (i = 2; i <= 3; i++) {
+        for (j = 0; j < n; j++) {
+            if (matriz[i][j] == 0) {
+                contador++;
+            }
+        }
+    }
+    return contador;
+}
+
+int main() {
     setlocale(LC_ALL, "es_ES");
+    int matriz[N][N];
+    leerMatriz(matriz, N);
+    printf("Hay %d elementos iguales a cero en las filas 3 y 4.\n", contarCeros(matriz, N));
+    return 0;
+}
