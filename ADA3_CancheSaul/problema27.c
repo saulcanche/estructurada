@@ -8,54 +8,50 @@ Descripcion:
 imprima, la suma y el producto, de sus elementos.
 */
 #include <stdio.h>
-#include <locale.h>
-void leerMatriz(int n, int m, int matriz[n][m]) {
-    printf("Ingrese los elementos de la matriz:\n");
-    for (int i = 0; i < n; i++) {
-        for (int j = 0; j < m; j++) {
+
+const int N = 4;
+const int M = 3;
+
+void leerMatriz(int matriz[N][M]) {
+    int i, j;
+    for (i = 0; i < N; i++) {
+        for (j = 0; j < M; j++) {
+            printf("Ingrese el elemento [%d][%d]: ", i + 1, j + 1);
             scanf("%d", &matriz[i][j]);
         }
     }
 }
-void imprimirMatriz(int n, int m, int matriz[n][m]) {
-    for (int i = 0; i < n; i++) {
-        for (int j = 0; j < m; j++) {
-            printf("%d ", matriz[i][j]);
-        }
-        printf("\n");
-    }
-}
-int sumMatriz(int n, int m, int matriz[n][m]){
-    int sum = 0;
-    for (int i = 0; i < n ; i++){
-        for (int j = 0; j < m ; j++) {
-            sum += matriz[i][j];
+
+int sumarMatriz(int matriz[N][M]) {
+    int i, j, suma = 0;
+    for (i = 0; i < N; i++) {
+        for (j = 0; j < M; j++) {
+            suma += matriz[i][j];
         }
     }
-    return sum;
+    return suma;
 }
-int prodMatriz(int n, int m, int matriz[n][m]){
-    int prod = 1;
-    for (int i = 0; i < n ; i++){
-        for (int j = 0; j < n ; j++){
-            prod *= matriz[i][j];
+
+int multiplicarMatriz(int matriz[N][M]) {
+    int i, j, producto = 1;
+    for (i = 0; i < N; i++) {
+        for (j = 0; j < M; j++) {
+            producto *= matriz[i][j];
         }
     }
-    return prod;
+    return producto;
 }
-int main(){
-    setlocale(LC_ALL, "es_ES");
-    /* Entradas*/
-    const int n = 4;
-    const int m = 3;
-    int numeros[n][m];
-    leerMatriz(n, m, numeros);
-    /* Proceso*/
-    int producto = prodMatriz(n, m, numeros);
-    int suma = sumMatriz(n, m, numeros);
-    /* Salidas*/
-    printf("usted ingreso la siguiente matriz: ");
-    imprimirMatriz(n,m, numeros);
-    printf("\n la suma de todos los elementos es, %i", suma);
-    printf("\n el producto de todos los elementos es: %i", producto);
+
+int main() {
+    int matriz[N][M], suma, producto;
+
+    leerMatriz(matriz);
+
+    suma = sumarMatriz(matriz);
+    printf("La suma de los elementos de la matriz es: %d\n", suma);
+
+    producto = multiplicarMatriz(matriz);
+    printf("El producto de los elementos de la matriz es: %d\n", producto);
+
+    return 0;
 }
