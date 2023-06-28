@@ -9,10 +9,13 @@ Descripcion: *9. Utilizar la funcion strcmp() para comparar dos palabras.*/
 #include<string.h>
 
 int main(){
+	/*Entradas*/
 	char cad1[] = "Hola";
 	char cad2[] = "Hola que tal";
 	
+	/* Proceso*/
 	if(strcmp(cad1,cad2)==0){
+		/*Salidas*/
 		printf("Ambas cadenas son iguales");	
 	}
 	else{

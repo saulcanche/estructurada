@@ -10,16 +10,17 @@ la palabra "mundo" por "y bienvenido al lenguaje C".*/
 #include<string.h>
 
 int main(){
+	/* Entradas*/
 	char cad1[] ="Hola mundo";
 	char cad2[30];
-	
+	/* Proceso*/	
 	strcpy(cad2,cad1); //Copiamos el contenido de cad1 hacia cad2.
 	
 	strcpy(cad2+5,"y bienvenido al lenguaje C"); //dejamos 5 espacios porque es lo que
 												//ocupa mundo, y lo cambiamos por 
 												//"y bienvenido al lenguaje C".
-	
-	printf("%s",cad2); //Imprimimos cad2
+	/* Salida*/	
+	printf("%s",cad2); //Imprimimos cad2 // que es el resultado de sumar las dos cadenas
 	
 	
 	

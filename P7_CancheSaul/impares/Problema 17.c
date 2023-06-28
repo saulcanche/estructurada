@@ -15,15 +15,19 @@ struct datos{
 }datos1;
 
 int main(){
+	/*Entradas*/
 	printf("Digite su nombre (en MAYUSCULAS): ");
 	gets(datos1.nombre);
 	printf("Digite sus apellidos (en MAYUSCULAS): ");
 	gets(datos1.apellidos);
 	
+	/*Proceso*/
 	//Convirtiendo a minusculas
-	strlwr(datos1.nombre);
-	strlwr(datos1.apellidos);
+
+	strlwr(datos1.nombre); //usamos la funcion strlwr para convertir a minusculas
+	strlwr(datos1.apellidos);//usamos la funcion strlwr para convertir a minusculas
 	
+	/* Salidas*/
 	//Mostrando datos convertidos
 	printf("\nSu nombre: %s",datos1.nombre);
 	printf("\nSus apellidos: %s",datos1.apellidos);

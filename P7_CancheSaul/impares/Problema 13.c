@@ -10,12 +10,12 @@ Descripcion: /13. Invertir una cadena con la funci�n strrev().
 #include<string.h>
 
 int main(){
+	/* Entradas*/
 	char cadena[] = "Hola";
-	
+	/*Proceso*/	
 	strrev(cadena); //Invertimos la cadena con la funcion strrev
 	
+	/* Salidas*/
 	printf("Cadena Invertida: %s",cadena); //mostramos la cadena invertida
-	
-	
 	return 0;
 }

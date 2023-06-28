@@ -11,19 +11,22 @@ anitalavalatina  reconocer */
 #include<string.h>
 
 int main(){
+	/* Entradas*/
 	char palabra[] = "reconocer";
 	char palabra2[20];
 	
+	/* Proceso*/
 	//Copiamos el contenido de palabra hacia palabra2
 	strcpy(palabra2,palabra); 
 	
 	strrev(palabra2); //Invertimos a palabra2
 	
-	if(strcmp(palabra,palabra2)==0){
-		printf("Palabra capicua");
+	/*¨Salidas*/
+	if(strcmp(palabra,palabra2)==0){ //comparamos para validar si es la misma palabra|
+		printf("Palabra capicua");  //en caso de serlo decimos 
 	}	
 	else{
-		printf("No es capicua");
+		printf("No es capicua"); //en caso de ser diferentes decimos igual
 	}
 	
 	return 0;

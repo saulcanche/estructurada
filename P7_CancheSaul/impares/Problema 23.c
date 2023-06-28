@@ -10,11 +10,12 @@ n�mero flotante.*/
 #include<stdlib.h>
 
 int main(){
+	/* Entrada*/
 	char *cad = "123.45";
 	float valor;
-	
-	valor = atof(cad);
-	
+	/* Proceso*/
+	valor = atof(cad); // usamos la funcion atof para convertir a floatante la cadena
+	/* Salida*/
 	printf("Numero flotante: %.2f",valor);
 	
 	

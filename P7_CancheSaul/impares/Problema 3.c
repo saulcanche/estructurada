@@ -9,22 +9,22 @@ Descripcion: *3. Leer un string con getchar() y contabilizar cuantas vocales tie
 
 int main(){
 	int c,cont=0;
-	
+	 /* Entrada*/
 	printf("Digite una palabra (y luego contro-z): ");
 	
 	while(EOF != (c=getchar())){
-		
-		switch(c){
+	/* Proceso*/	
+		switch(c){ //Cuando se elija una vocal, se aumentara el contador
 			case 'a':
 			case 'e':
 			case 'i':
 			case 'o':
-			case 'u': cont++;
+			case 'u': cont++; 
 		}
-		
+		/* Salidas*/
 		putchar(c);
 	}
-	
+	/* Salida*/
 	printf("El total de vocales es: %i",cont);
 	
 	return 0;

@@ -9,14 +9,14 @@ Descripcion: *7. Utilizar la funcion strcat() para a�adir un texto a un string
 #include<string.h>
 
 int main(){
+	/* Entrada*/
 	char cad[] = "Hola que tal? ";
-	
+	/* Proceso*/	
 	strcat(cad,"Mi nombre es alejandro");
 	
 	//cad = Hola que tal? Mi nombre es alejandro
-	
+	/* Salida*/	
 	printf("%s",cad);
-	
 	
 	return 0;
 }

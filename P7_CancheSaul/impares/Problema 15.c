@@ -10,12 +10,15 @@ Compararlas, y decir si son iguales.*/
 #include<string.h>
 
 int main(){
+	/* Entradas*/
 	char palabra[] = "hola";
 	char palabra2[] = "hola";
 	
+	/*Proceso*/
 	strupr(palabra); //Convirtiendo ambas cadenas a MAYUSCULA
 	strupr(palabra2);
 	
+	/*Salidas*/
 	//Comparandolas
 	if(strcmp(palabra,palabra2)==0){
 		printf("Ambas cadenas con iguales");
@@ -23,6 +26,6 @@ int main(){
 	else{
 		printf("Son diferentes");
 	}
-	
+	// El proceso 
 	return 0;
 }

@@ -10,15 +10,13 @@ Con la funci�n atoi().*/
 #include<stdlib.h>
 
 int main(){
+	/*Entradas*/
 	char *cad = "1234";
 	int valor;
-	
-	valor = atoi(cad);
-	
-	printf("Valor numerico: %i",valor);
-	
-	
-	
+	/* Proceso*/
+	valor = atoi(cad); //usamos la funcion atoid para convertir la cadena a entero
+	/* SAlida*/
+	printf("Valor numerico: %i",valor); //usamos %i para imprimir debido a que ahora es un entero
 	return 0;
 }
 
