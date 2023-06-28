@@ -17,18 +17,21 @@ struct datos{
 }datos1;
 
 int main(){
+	/*Entradas*/
 	printf("Digite su nombre: ");
-	gets(datos1.nombre);
+	gets(datos1.nombre); //usamos gets para guardar el nombre en la estructura
 	printf("Digite sus apellidos: ");
 	gets(datos1.apellidos);
 	printf("Digite su ciudad: ");
 	gets(datos1.ciudad);
 	
+	/*Proceso*/
 	//Convirtiendo a MAYUSCULAS
-	strupr(datos1.nombre);
-	strupr(datos1.apellidos);
-	strupr(datos1.ciudad);
+	strupr(datos1.nombre);  //usamos la funcion strupr para convertir en mayusculas
+	strupr(datos1.apellidos);//usamos la funcion strupr para convertir en mayusculas
+	strupr(datos1.ciudad);//usamos la funcion strupr para convertir en mayusculas
 	
+	//Salidas
 	//Mostrando datos convertidos
 	printf("\nSu nombre: %s",datos1.nombre);
 	printf("\nSus apellidos: %s",datos1.apellidos);

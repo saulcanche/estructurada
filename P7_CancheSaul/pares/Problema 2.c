@@ -11,11 +11,12 @@ Descripcion:
 
 int main(){
 	int c,cont=0;
+	/*Proceso*/
 	
-	while(EOF != (c=getchar())){
-		cont++;
+	while(EOF != (c=getchar())/*Entrada*/){
+		cont++; //Contador 
 	}
-	
+	/*Salida*/
 	printf("La cadena tiene %i espacios ocupados",cont-1);
 	
 	return 0;

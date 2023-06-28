@@ -13,10 +13,14 @@ a�adir la frase "Que tengas un buen dia", al final de la cadena.*/
 int main(){
 	char cad[20];
 	
+	/*Entrada*/
 	printf("Digite una Cadena: "); //Pedimos la cadena al usuario
+
 	gets(cad);
+	/*Proceso*/
 	
 	strcat(cad," Que tengas un buen dia"); //a�adimos al final de la cadena
+	/* Salida*/
 	
 	printf("%s",cad);
 	

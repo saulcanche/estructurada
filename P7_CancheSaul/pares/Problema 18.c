@@ -16,15 +16,18 @@ struct familia{
 
 int main(){
 	int i;
+	/* Entradas*/
 	//Pedimos el nombre para 3 familiares
 	for(i=0;i<3;i++){
 		printf("Nombre del familiar[%i] (en MAYUSCULA): ",i+1);
 		gets(familiares[i].nombre);
 	}
+	/* Proceso*/
 	//Convertimos a minusculas los datos
 	for(i=0;i<3;i++){
 		strlwr(familiares[i].nombre);
 	}
+	/* Salidas*/
 	
 	//Por ultimo imprimimos los datos en minuscula
 	for(i=0;i<3;i++){

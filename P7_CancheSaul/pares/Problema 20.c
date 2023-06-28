@@ -13,13 +13,15 @@ comprobar si es capicua.*/
 int main(){
 	char palabra[20];
 	char palabra2[20];
-	
+	/*Entrada*/
 	printf("Digite una palabra: ");
 	gets(palabra);
+	/* Proceso*/
 	
 	strcpy(palabra2,palabra); //copiamos el contenido de palabra hacia palabra2
 	strrev(palabra2); //invertimos la palabra
 	
+	/* Salida*/
 	printf("\nPalabra: %s",palabra);
 	printf("\nPalabra Invertida: %s",palabra2);
 	

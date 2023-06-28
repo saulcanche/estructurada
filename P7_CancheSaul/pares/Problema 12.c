@@ -17,6 +17,7 @@ int main(){
     //de nombre porque aqu� copiaremos esa cadena.
     int i,j,k;
     int l=0;
+    /*Entrada*/
     printf("Para terminar escriba * \n");
     do
         {
@@ -25,7 +26,7 @@ int main(){
             l++;
         }
     while (strcmp(nombre[l-1],"*")!=0);//permite comparar cadenas.
-
+    /*Proceso*/
     // ORDENAR CADENAS
     for(i=0; i<l-1; i++)
     {
@@ -43,7 +44,7 @@ int main(){
         strcpy(nombre[k],nombre[i]);
         strcpy(nombre[i],aux);
     }
-
+    /* Salidaas*/
     for(i=0; i<l; i++)
     {
         printf("%s",nombre[i]);

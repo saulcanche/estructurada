@@ -12,13 +12,15 @@ Descripcion:
 int main(){
 	char nombre1[20],nombre2[20];
 	
+	/* Entrada*/
 	printf("Digite el primer nombre: ");
 	gets(nombre1);
 	printf("Digite el segundo nombre: ");
 	gets(nombre2);
 	
-	if(strcmp(nombre1,nombre2)==0){
-		printf("Ambos nombres son iguales");
+	/* Proceso*/ /*Salida*/
+	if(strcmp(nombre1,nombre2)==0){ //usamos la funcion strcmp para comparar los dos nombres ingresados 
+		printf("Ambos nombres son iguales"); //Cuando son iguales
 	}
 	else{
 		printf("Los nombres son distintos");

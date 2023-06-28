@@ -13,15 +13,14 @@ caracteres tiene.*/
 int main(){
 	char palabra[30];
 	
+	/* Entradas*/
 	printf("Digite una palabra: "); //Pedimos la cadena al usuario
 	gets(palabra);
-	
+	/*Proceso*/	
 	strrev(palabra);  //invertimos la palabra con la funcion strrev
-	
+	/*Salida*/
 	printf("Cadena Invertida: %s",palabra); //Imprimimos la cadena invertida
 	printf("\nCaracteres totales: %i",strlen(palabra)); //Mostramos la cantidad de 
 														//caracteres que tiene.
-	
-	
 	return 0;
 }
