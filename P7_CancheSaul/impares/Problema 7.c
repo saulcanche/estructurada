@@ -1,4 +1,9 @@
-/*7. Utilizar la funcion strcat() para añadir un texto a un string.*/
+/* Author: Saul Canche Marcial 
+Copilador: Zinjai
+Version: 1.0
+Sistema operativo: Linux ubuntu
+Fecha de cracion: 22 de junio 2023
+Descripcion: *7. Utilizar la funcion strcat() para aï¿½adir un texto a un string.*/
 
 #include<stdio.h>
 #include<string.h>

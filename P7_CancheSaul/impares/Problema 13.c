@@ -1,4 +1,10 @@
-//13. Invertir una cadena con la función strrev().
+/* Author: Saul Canche Marcial 
+Copilador: Zinjai
+Version: 1.0
+Sistema operativo: Linux ubuntu
+Fecha de cracion: 22 de junio 2023
+Descripcion: /13. Invertir una cadena con la funciï¿½n strrev().
+*/
 
 #include<stdio.h>
 #include<string.h>

@@ -1,4 +1,9 @@
-/*5. Copiar la cadena de caracteres "Hola mundo" de un array a otro. Luego cambiar 
+/* Author: Saul Canche Marcial 
+Copilador: Zinjai
+Version: 1.0
+Sistema operativo: Linux ubuntu
+Fecha de cracion: 22 de junio 2023
+Descripcion: *5. Copiar la cadena de caracteres "Hola mundo" de un array a otro. Luego cambiar 
 la palabra "mundo" por "y bienvenido al lenguaje C".*/
 
 #include<stdio.h>

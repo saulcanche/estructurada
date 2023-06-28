@@ -1,4 +1,9 @@
-/*9. Utilizar la funcion strcmp() para comparar dos palabras.*/
+/* Author: Saul Canche Marcial 
+Copilador: Zinjai
+Version: 1.0
+Sistema operativo: Linux ubuntu
+Fecha de cracion: 22 de junio 2023
+Descripcion: *9. Utilizar la funcion strcmp() para comparar dos palabras.*/
 
 #include<stdio.h>
 #include<string.h>

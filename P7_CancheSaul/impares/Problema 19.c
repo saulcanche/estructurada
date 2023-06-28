@@ -1,6 +1,11 @@
-//19. Determinar si una palabra es capicua o no.
+/* Author: Saul Canche Marcial 
+Copilador: Zinjai
+Version: 1.0
+Sistema operativo: Linux ubuntu
+Fecha de cracion: 22 de junio 2023
+Descripcion: 19. Determinar si una palabra es capicua o no.
 
-//anitalavalatina  reconocer
+anitalavalatina  reconocer */
 
 #include<stdio.h>
 #include<string.h>

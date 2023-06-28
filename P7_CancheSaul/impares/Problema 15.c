@@ -1,4 +1,9 @@
-/*15. Convertir dos cadena de minusculas a MAYUSCULAS con la funcion strupr(). 
+/* Author: Saul Canche Marcial 
+Copilador: Zinjai
+Version: 1.0
+Sistema operativo: Linux ubuntu
+Fecha de cracion: 22 de junio 2023
+Descripcion: *15. Convertir dos cadena de minusculas a MAYUSCULAS con la funcion strupr(). 
 Compararlas, y decir si son iguales.*/
 
 #include<stdio.h>

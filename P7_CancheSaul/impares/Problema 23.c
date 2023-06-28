@@ -1,5 +1,10 @@
-/*23. Utilizar la función atof() para pasar una cadena (por ejemplo: "123.45"), a 
-número flotante.*/
+/* Author: Saul Canche Marcial 
+Copilador: Zinjai
+Version: 1.0
+Sistema operativo: Linux ubuntu
+Fecha de cracion: 22 de junio 2023
+Descripcion: *23. Utilizar la funciï¿½n atof() para pasar una cadena (por ejemplo: "123.45"), a 
+nï¿½mero flotante.*/
 
 #include<stdio.h>
 #include<stdlib.h>

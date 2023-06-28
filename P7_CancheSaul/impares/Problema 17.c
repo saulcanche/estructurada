@@ -1,4 +1,9 @@
-/*17. Pedir su nombre y apellidos al usuario (en mayuscula), porteriormente utilizar
+/* Author: Saul Canche Marcial 
+Copilador: Zinjai
+Version: 1.0
+Sistema operativo: Linux ubuntu
+Fecha de cracion: 22 de junio 2023
+Descripcion: *17. Pedir su nombre y apellidos al usuario (en mayuscula), porteriormente utilizar
 la funcion strlwr() para convertir las MAYUSCULAS en minusculas e imprimir los datos.*/
 
 #include<stdio.h>

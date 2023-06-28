@@ -1,4 +1,9 @@
-/*11. Pedir 2 palabras al usuario y ordenarlas alfabeticamente.*/
+/* Author: Saul Canche Marcial 
+Copilador: Zinjai
+Version: 1.0
+Sistema operativo: Linux ubuntu
+Fecha de cracion: 22 de junio 2023
+Descripcion: *11. Pedir 2 palabras al usuario y ordenarlas alfabeticamente.*/
 
 #include<stdio.h>
 #include<string.h>
