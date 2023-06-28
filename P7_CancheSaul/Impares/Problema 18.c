@@ -1,4 +1,10 @@
-/*18. Pedir el nombre de 3 familiares al usuario (en MAYUSCULAS), y posteriormente
+/* Author: Saul Canche Marcial 
+Copilador: Zinjai
+Version: 1.0
+Sistema operativo: Linux ubuntu
+Fecha de cracion: 22 de junio 2023
+Descripcion: 
+*18. Pedir el nombre de 3 familiares al usuario (en MAYUSCULAS), y posteriormente
 convertir los datos a minusculas.*/
 
 #include<stdio.h>

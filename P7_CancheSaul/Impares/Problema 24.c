@@ -1,5 +1,11 @@
-/*24. Pedir dos cadenas(con numero flotante) al usuario, posteriormente multiplicar
-dichos números y mostrar su resultado.*/
+/* Author: Saul Canche Marcial 
+Copilador: Zinjai
+Version: 1.0
+Sistema operativo: Linux ubuntu
+Fecha de cracion: 22 de junio 2023
+Descripcion: 
+*24. Pedir dos cadenas(con numero flotante) al usuario, posteriormente multiplicar
+dichos nï¿½meros y mostrar su resultado.*/
 
 #include<stdio.h>
 #include<stdlib.h>

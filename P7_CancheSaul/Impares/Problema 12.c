@@ -1,4 +1,10 @@
-/*12. Pedir n palabras al usuario y posteriormente ordenarlas alfabeticamente.
+/* Author: Saul Canche Marcial 
+Copilador: Zinjai
+Version: 1.0
+Sistema operativo: Linux ubuntu
+Fecha de cracion: 22 de junio 2023
+Descripcion: 
+12. Pedir n palabras al usuario y posteriormente ordenarlas alfabeticamente.
 Utilizar metodo de ordenamiento (Burbuja, insercion, seleccion)*/
 
 #include<stdio.h>
@@ -7,8 +13,8 @@ Utilizar metodo de ordenamiento (Burbuja, insercion, seleccion)*/
 
 int main(){
     char nombre[10][20];
-    char aux[20];//tiene que ser de igual o mayor tamaño que la segunda componente
-    //de nombre porque aquí copiaremos esa cadena.
+    char aux[20];//tiene que ser de igual o mayor tamaï¿½o que la segunda componente
+    //de nombre porque aquï¿½ copiaremos esa cadena.
     int i,j,k;
     int l=0;
     printf("Para terminar escriba * \n");

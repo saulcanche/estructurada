@@ -1,4 +1,10 @@
-/*6. Pedir al usuario que digite una cadena, luego copiar su contenido hacia otro
+/* Author: Saul Canche Marcial 
+Copilador: Zinjai
+Version: 1.0
+Sistema operativo: Linux ubuntu
+Fecha de cracion: 22 de junio 2023
+Descripcion: 
+*6. Pedir al usuario que digite una cadena, luego copiar su contenido hacia otro
 array de caracteres. y por ultimo modificar su mensaje poniendo a partir de la posicion
 10 "Buena broma".*/
 

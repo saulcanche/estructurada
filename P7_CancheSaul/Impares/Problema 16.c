@@ -1,4 +1,10 @@
-/*16. Pedir al usuario su nombre,apellido, y ciudad en la que vive, posteriormente
+/* Author: Saul Canche Marcial 
+Copilador: Zinjai
+Version: 1.0
+Sistema operativo: Linux ubuntu
+Fecha de cracion: 22 de junio 2023
+Descripcion: 
+*16. Pedir al usuario su nombre,apellido, y ciudad en la que vive, posteriormente
 convertir todo a MAYUSCULAS e imprimir los datos.(Utilizar una estructura)*/
 
 #include<stdio.h>

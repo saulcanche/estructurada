@@ -1,3 +1,12 @@
+/* Author: Saul Canche Marcial 
+Copilador: Zinjai
+Version: 1.0
+Sistema operativo: Linux ubuntu
+Fecha de cracion: 22 de junio 2023
+Descripcion: 
+
+
+
 /*4. Leer un string con getchar() y contabilizar cuantas veces aparece la vocal a,e,i,o,
 u, e imprimir el contador de cada una.*/
 

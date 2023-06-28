@@ -1,4 +1,10 @@
-/*20. Pedir al usuario que digite una palabra. luego mostrar la palabra invertida y
+/* Author: Saul Canche Marcial 
+Copilador: Zinjai
+Version: 1.0
+Sistema operativo: Linux ubuntu
+Fecha de cracion: 22 de junio 2023
+Descripcion: 
+*20. Pedir al usuario que digite una palabra. luego mostrar la palabra invertida y
 comprobar si es capicua.*/
 
 #include<stdio.h>

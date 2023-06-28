@@ -1,4 +1,10 @@
-/*22. Pedir dos cadenas numericas al usuario. Luego Convertirlas a numeros enteros.
+/* Author: Saul Canche Marcial 
+Copilador: Zinjai
+Version: 1.0
+Sistema operativo: Linux ubuntu
+Fecha de cracion: 22 de junio 2023
+Descripcion: 
+*22. Pedir dos cadenas numericas al usuario. Luego Convertirlas a numeros enteros.
 Sumar los valor y entregar el resultado.*/
 
 #include<stdio.h>
