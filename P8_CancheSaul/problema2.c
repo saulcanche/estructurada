@@ -11,42 +11,60 @@ para 3 alumnos, comprobar cual de los 3 tiene el mejor promedio y
 posteriormente imprimir los datos del alumno*/
 #include <stdio.h>
 #include <locale.h>
-struct alumno{
-	char nombre[20];
-	int edad;
-	float promedio;
-}alumnos[3];
 
-int main(){
-    setlocale(LC_ALL, "es_ES");
-    	int i,pos;
-	float mejorNota = 0.0;
-    /* Entrada*/
-	for(i=0;i<3;i++){
-		fflush(stdin);
-		printf("%i. Digite su nombre: ",i+1);
-		gets(alumnos[i].nombre);
-		printf("%i. Digite su edad: ",i+1);
-		scanf("%i",&alumnos[i].edad);
-		printf("Digite su promedio: ",i+1);
-		scanf("%f",&alumnos[i].promedio);
-		printf("\n");
-	}
-	
-    /*Proceso*/
-	for(i=0;i<3;i++){
-		if(alumnos[i].promedio > mejorNota){
-			mejorNota = alumnos[i].promedio;
-			pos = i;
-		}
-	}
-    /* SAlida*/
-	//Imprimimos los datos del mejor promedio
-	printf("\nEl alumno con la mejor nota es: \n");
-	printf("\nNombre: %s",alumnos[pos].nombre);
-	printf("\nEdad: %i",alumnos[pos].edad);
-	printf("\nPromedio: %.2f\n\n",alumnos[pos].promedio);
-	
-	system("pause");
-	return 0;
+struct Alumno {
+    char nombre[20];
+    int edad;
+    float promedio;
+};
+
+void obtenerInformacion(struct Alumno *alumnos, int cantidad) {
+    int i;
+
+    for (i = 0; i < cantidad; i++) {
+        printf("%i. Digite su nombre: ", i + 1);
+        fgets(alumnos[i].nombre, sizeof(alumnos[i].nombre), stdin);
+        printf("%i. Digite su edad: ", i + 1);
+        scanf("%i", &(alumnos[i].edad));
+        printf("Digite su promedio: ", i + 1);
+        scanf("%f", &(alumnos[i].promedio));
+        fflush(stdin);
+        printf("\n");
+    }
+}
+
+int obtenerMejorNota(struct Alumno *alumnos, int cantidad) {
+    int i;
+    float mejorNota = 0.0;
+    int pos = 0;
+
+    for (i = 0; i < cantidad; i++) {
+        if (alumnos[i].promedio > mejorNota) {
+            mejorNota = alumnos[i].promedio;
+            pos = i;
+        }
+    }
+
+    return pos;
+}
+
+void mostrarMejorAlumno(struct Alumno *alumnos, int pos) {
+    printf("\nEl alumno con la mejor nota es:\n");
+    printf("\nNombre: %s", alumnos[pos].nombre);
+    printf("Edad: %i", alumnos[pos].edad);
+    printf("Promedio: %.2f\n\n", alumnos[pos].promedio);
+}
+
+int main() {
+    setlocale(LC_ALL, "es_ES.UTF-8");
+
+    int cantidad = 3;
+    struct Alumno alumnos[3];
+    int posMejorAlumno;
+
+    obtenerInformacion(alumnos, cantidad);
+    posMejorAlumno = obtenerMejorNota(alumnos, cantidad);
+    mostrarMejorAlumno(alumnos, posMejorAlumno);
+
+    return 0;
 }

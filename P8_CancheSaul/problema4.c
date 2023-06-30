@@ -12,47 +12,57 @@ los siguientes miembros: nombre, pais, numero_medallas. y devuelva los datos
 #include<stdio.h>
 #include<stdlib.h>
 #include <locale.h>
-struct atleta{
-	char nombre[20];
-	char pais[20];
+
+struct atleta {
+	char nombre[18];
+	char pais[18];
 	int numero_medallas;
-}atletas[100];
+};
 
-int main(){
-
-	setlocale(LC_ALL, "es_ES");
-	int i,n,mayor = 0,pos;
-	/* Entradas*/
-	printf("Digite el numero de atletas: ");
-	scanf("%i",&n);
-	
-	for(i=0;i<n;i++){
-		fflush(stdin);
-		printf("%i. Digite su nombre: ",i+1);
-		gets(atletas[i].nombre);
-		fflush(stdin);
-		printf("%i. Digite su pais: ",i+1);
-		gets(atletas[i].pais);
-		printf("%i. Digite el numero de medallas: ",i+1);
-		scanf("%i",&atletas[i].numero_medallas);
+void ingresarAtletas(struct atleta atletas[], int n) {
+	int i;
+	for (i = 0; i < n; i++) {
+		printf("%d. Digite su nombre: ", i + 1);
+		fgets(atletas[i].nombre, sizeof(atletas[i].nombre), stdin);
+		printf("%d. Digite su país: ", i + 1);
+		fgets(atletas[i].pais, sizeof(atletas[i].pais), stdin);
+		printf("%d. Digite el número de medallas: ", i + 1);
+		scanf("%d", &atletas[i].numero_medallas);
+		getchar(); // Limpiar el búfer de entrada después de scanf
 		printf("\n");
 	}
-	
-    /*Proceso*/
-	for(i=0;i<n;i++){
-		if(atletas[i].numero_medallas > mayor){
+}
+
+int encontrarAtletaMasMedallas(struct atleta atletas[], int n) {
+	int i, mayor = -1, pos = 0;
+	for (i = 0; i < n; i++) {
+		if (atletas[i].numero_medallas > mayor) {
 			mayor = atletas[i].numero_medallas;
 			pos = i;
 		}
 	}
-    /*Salida*/
-	
-	printf("\n--El atleta con mas medallas es: --\n");
-	printf("\nNombre: %s",atletas[pos].nombre);
-	printf("\nPais: %s\n\n",atletas[pos].pais);
-	
-	system("pause");
-	return 0;
+	return pos;
 }
 
-  
+void imprimirAtletaMasMedallas(struct atleta atletas[], int pos) {
+	printf("\n-- El atleta con más medallas es: --\n");
+	printf("\nNombre: %s", atletas[pos].nombre);
+	printf("País: %s\n\n", atletas[pos].pais);
+}
+
+int main() {
+	setlocale(LC_ALL, "es_ES");
+
+	int n, pos;
+	printf("Digite el número de atletas: ");
+	scanf("%d", &n);
+
+	struct atleta atletas[98];
+
+	ingresarAtletas(atletas, n);
+	pos = encontrarAtletaMasMedallas(atletas, n);
+	imprimirAtletaMasMedallas(atletas, pos);
+
+	getchar(); // Esperar entrada del usuario antes de finalizar el programa
+	return 0;
+}
