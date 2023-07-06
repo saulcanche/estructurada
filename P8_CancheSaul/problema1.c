@@ -13,48 +13,57 @@ para un corredor, y asignarle una categoria de competicion:
 	- Veterano > 40 años
 posteriormente imprimir todos los datos del corredor, incluida su
 categoria de competicion*/
-
-#include<stdio.h>
-#include<stdlib.h>
+#include <stdio.h>
+#include <stdlib.h>
 #include <locale.h>
-struct corredor{
-	char nombre[20];
-	int edad;
-	char sexo[10];
-	char club[20];
-}corredor1;
+#include <string.h>
 
-int main(){
-    setlocale(LC_ALL, "es_ES");
+struct Corredor {
+    char nombre[20];
+    int edad;
+    char sexo[10];
+    char club[20];
+};
+
+void obtenerInformacion(struct Corredor *corredor) {
+    printf("Digite su nombre: ");
+    fgets(corredor->nombre, sizeof(corredor->nombre), stdin);
+    printf("Digite su edad: ");
+    scanf("%i", &(corredor->edad));
+    fflush(stdin);
+    printf("Digite su sexo: ");
+    fgets(corredor->sexo, sizeof(corredor->sexo), stdin);
+    printf("Digite su club: ");
+    fgets(corredor->club, sizeof(corredor->club), stdin);
+}
+
+void determinarCategoria(struct Corredor *corredor, char *categoria) {
+    if (corredor->edad <= 18) {
+        strcpy(categoria, "Juvenil");
+    } else if (corredor->edad <= 40) {
+        strcpy(categoria, "Senior");
+    } else {
+        strcpy(categoria, "Veterano");
+    }
+}
+
+void mostrarInformacion(struct Corredor *corredor, char *categoria) {
+    printf("\nSu categoría es: %s", categoria);
+    printf("\nSu nombre es: %s", corredor->nombre);
+    printf("Su edad es: %i", corredor->edad);
+    printf("Su sexo es: %s", corredor->sexo);
+    printf("Su club es: %s\n", corredor->club);
+}
+
+int main() {
+    setlocale(LC_ALL, "es_ES.UTF-8");
+
+    struct Corredor corredor1;
     char categoria[20];
-	/* Entrada */
-	printf("Digite su nombre: ");
-	gets(corredor1.nombre);
-	printf("Digite su edad: ");
-	scanf("%i",&corredor1.edad);
-	fflush(stdin);
-	printf("Digite su sexo: ");
-	gets(corredor1.sexo);
-	printf("Digite su club: ");
-	gets(corredor1.club);
-	/* Proceso*/
-	if(corredor1.edad<=18){
-		strcpy(categoria,"Juvenil"); //categoria = Juvenil
-	}
-	else if(corredor1.edad<=40){
-		strcpy(categoria,"Senior"); //categoria = Señor
-	}
-	else{
-		strcpy(categoria,"Veterano");
-	}
-    /*Salida*/
-	
-	printf("\n\nSu categoria es: %s",categoria);
-	printf("\nSu nombre es: %s",corredor1.nombre);
-	printf("\nSu edad es: %i",corredor1.edad);
-	printf("\nSu sexo es: %s",corredor1.sexo);
-	printf("\nSu club es: %s\n",corredor1.club);
-	
-	
-	return 0;
+
+    obtenerInformacion(&corredor1);
+    determinarCategoria(&corredor1, categoria);
+    mostrarInformacion(&corredor1, categoria);
+
+    return 0;
 }
